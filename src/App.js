@@ -2,10 +2,9 @@ import React from 'react';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
-// index.js 에서 이미 해줬음:
-// import { Amplify } from 'aws-amplify';
-// import awsExports from './aws-exports';
-// Amplify.configure(awsExports);
+import { Amplify } from 'aws-amplify';
+import awsExports from './aws-exports';
+Amplify.configure(awsExports);
 
 function App({ isPassedToWithAuthenticator, signOut, user }) {
   if (!isPassedToWithAuthenticator) {
